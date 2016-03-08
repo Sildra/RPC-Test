@@ -1,0 +1,3 @@
+﻿service GRPCService {
+	rpc GetZero() returns (int32) { }
+}
