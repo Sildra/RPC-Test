@@ -24,45 +24,45 @@ namespace RPCClient.SoapService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SoapService.SoapServiceSoap")]
     public interface SoapServiceSoap {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAPResetGenerator", ReplyAction="*")]
-        void SOAPResetGenerator();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ResetGenerator", ReplyAction="*")]
+        void ResetGenerator();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAPResetGenerator", ReplyAction="*")]
-        System.Threading.Tasks.Task SOAPResetGeneratorAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ResetGenerator", ReplyAction="*")]
+        System.Threading.Tasks.Task ResetGeneratorAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAPGetInteger", ReplyAction="*")]
-        int SOAPGetInteger();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetInteger", ReplyAction="*")]
+        int GetInteger();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAPGetInteger", ReplyAction="*")]
-        System.Threading.Tasks.Task<int> SOAPGetIntegerAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetInteger", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> GetIntegerAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAPGetZero", ReplyAction="*")]
-        int SOAPGetZero();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetZero", ReplyAction="*")]
+        int GetZero();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAPGetZero", ReplyAction="*")]
-        System.Threading.Tasks.Task<int> SOAPGetZeroAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetZero", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> GetZeroAsync();
         
-        // CODEGEN: Generating message contract since element name SOAPGetIntegersResult from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAPGetIntegers", ReplyAction="*")]
-        RPCClient.SoapService.SOAPGetIntegersResponse SOAPGetIntegers(RPCClient.SoapService.SOAPGetIntegersRequest request);
+        // CODEGEN: Generating message contract since element name GetIntegersResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetIntegers", ReplyAction="*")]
+        RPCClient.SoapService.GetIntegersResponse GetIntegers(RPCClient.SoapService.GetIntegersRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SOAPGetIntegers", ReplyAction="*")]
-        System.Threading.Tasks.Task<RPCClient.SoapService.SOAPGetIntegersResponse> SOAPGetIntegersAsync(RPCClient.SoapService.SOAPGetIntegersRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetIntegers", ReplyAction="*")]
+        System.Threading.Tasks.Task<RPCClient.SoapService.GetIntegersResponse> GetIntegersAsync(RPCClient.SoapService.GetIntegersRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class SOAPGetIntegersRequest {
+    public partial class GetIntegersRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="SOAPGetIntegers", Namespace="http://tempuri.org/", Order=0)]
-        public RPCClient.SoapService.SOAPGetIntegersRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetIntegers", Namespace="http://tempuri.org/", Order=0)]
+        public RPCClient.SoapService.GetIntegersRequestBody Body;
         
-        public SOAPGetIntegersRequest() {
+        public GetIntegersRequest() {
         }
         
-        public SOAPGetIntegersRequest(RPCClient.SoapService.SOAPGetIntegersRequestBody Body) {
+        public GetIntegersRequest(RPCClient.SoapService.GetIntegersRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -71,15 +71,15 @@ namespace RPCClient.SoapService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class SOAPGetIntegersRequestBody {
+    public partial class GetIntegersRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
         public uint count;
         
-        public SOAPGetIntegersRequestBody() {
+        public GetIntegersRequestBody() {
         }
         
-        public SOAPGetIntegersRequestBody(uint count) {
+        public GetIntegersRequestBody(uint count) {
             this.count = count;
         }
     }
@@ -88,15 +88,15 @@ namespace RPCClient.SoapService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class SOAPGetIntegersResponse {
+    public partial class GetIntegersResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="SOAPGetIntegersResponse", Namespace="http://tempuri.org/", Order=0)]
-        public RPCClient.SoapService.SOAPGetIntegersResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetIntegersResponse", Namespace="http://tempuri.org/", Order=0)]
+        public RPCClient.SoapService.GetIntegersResponseBody Body;
         
-        public SOAPGetIntegersResponse() {
+        public GetIntegersResponse() {
         }
         
-        public SOAPGetIntegersResponse(RPCClient.SoapService.SOAPGetIntegersResponseBody Body) {
+        public GetIntegersResponse(RPCClient.SoapService.GetIntegersResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -105,16 +105,16 @@ namespace RPCClient.SoapService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class SOAPGetIntegersResponseBody {
+    public partial class GetIntegersResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public RPCClient.SoapService.ArrayOfInt SOAPGetIntegersResult;
+        public RPCClient.SoapService.ArrayOfInt GetIntegersResult;
         
-        public SOAPGetIntegersResponseBody() {
+        public GetIntegersResponseBody() {
         }
         
-        public SOAPGetIntegersResponseBody(RPCClient.SoapService.ArrayOfInt SOAPGetIntegersResult) {
-            this.SOAPGetIntegersResult = SOAPGetIntegersResult;
+        public GetIntegersResponseBody(RPCClient.SoapService.ArrayOfInt GetIntegersResult) {
+            this.GetIntegersResult = GetIntegersResult;
         }
     }
     
@@ -145,53 +145,53 @@ namespace RPCClient.SoapService {
                 base(binding, remoteAddress) {
         }
         
-        public void SOAPResetGenerator() {
-            base.Channel.SOAPResetGenerator();
+        public void ResetGenerator() {
+            base.Channel.ResetGenerator();
         }
         
-        public System.Threading.Tasks.Task SOAPResetGeneratorAsync() {
-            return base.Channel.SOAPResetGeneratorAsync();
+        public System.Threading.Tasks.Task ResetGeneratorAsync() {
+            return base.Channel.ResetGeneratorAsync();
         }
         
-        public int SOAPGetInteger() {
-            return base.Channel.SOAPGetInteger();
+        public int GetInteger() {
+            return base.Channel.GetInteger();
         }
         
-        public System.Threading.Tasks.Task<int> SOAPGetIntegerAsync() {
-            return base.Channel.SOAPGetIntegerAsync();
+        public System.Threading.Tasks.Task<int> GetIntegerAsync() {
+            return base.Channel.GetIntegerAsync();
         }
         
-        public int SOAPGetZero() {
-            return base.Channel.SOAPGetZero();
+        public int GetZero() {
+            return base.Channel.GetZero();
         }
         
-        public System.Threading.Tasks.Task<int> SOAPGetZeroAsync() {
-            return base.Channel.SOAPGetZeroAsync();
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        RPCClient.SoapService.SOAPGetIntegersResponse RPCClient.SoapService.SoapServiceSoap.SOAPGetIntegers(RPCClient.SoapService.SOAPGetIntegersRequest request) {
-            return base.Channel.SOAPGetIntegers(request);
-        }
-        
-        public RPCClient.SoapService.ArrayOfInt SOAPGetIntegers(uint count) {
-            RPCClient.SoapService.SOAPGetIntegersRequest inValue = new RPCClient.SoapService.SOAPGetIntegersRequest();
-            inValue.Body = new RPCClient.SoapService.SOAPGetIntegersRequestBody();
-            inValue.Body.count = count;
-            RPCClient.SoapService.SOAPGetIntegersResponse retVal = ((RPCClient.SoapService.SoapServiceSoap)(this)).SOAPGetIntegers(inValue);
-            return retVal.Body.SOAPGetIntegersResult;
+        public System.Threading.Tasks.Task<int> GetZeroAsync() {
+            return base.Channel.GetZeroAsync();
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<RPCClient.SoapService.SOAPGetIntegersResponse> RPCClient.SoapService.SoapServiceSoap.SOAPGetIntegersAsync(RPCClient.SoapService.SOAPGetIntegersRequest request) {
-            return base.Channel.SOAPGetIntegersAsync(request);
+        RPCClient.SoapService.GetIntegersResponse RPCClient.SoapService.SoapServiceSoap.GetIntegers(RPCClient.SoapService.GetIntegersRequest request) {
+            return base.Channel.GetIntegers(request);
         }
         
-        public System.Threading.Tasks.Task<RPCClient.SoapService.SOAPGetIntegersResponse> SOAPGetIntegersAsync(uint count) {
-            RPCClient.SoapService.SOAPGetIntegersRequest inValue = new RPCClient.SoapService.SOAPGetIntegersRequest();
-            inValue.Body = new RPCClient.SoapService.SOAPGetIntegersRequestBody();
+        public RPCClient.SoapService.ArrayOfInt GetIntegers(uint count) {
+            RPCClient.SoapService.GetIntegersRequest inValue = new RPCClient.SoapService.GetIntegersRequest();
+            inValue.Body = new RPCClient.SoapService.GetIntegersRequestBody();
             inValue.Body.count = count;
-            return ((RPCClient.SoapService.SoapServiceSoap)(this)).SOAPGetIntegersAsync(inValue);
+            RPCClient.SoapService.GetIntegersResponse retVal = ((RPCClient.SoapService.SoapServiceSoap)(this)).GetIntegers(inValue);
+            return retVal.Body.GetIntegersResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<RPCClient.SoapService.GetIntegersResponse> RPCClient.SoapService.SoapServiceSoap.GetIntegersAsync(RPCClient.SoapService.GetIntegersRequest request) {
+            return base.Channel.GetIntegersAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<RPCClient.SoapService.GetIntegersResponse> GetIntegersAsync(uint count) {
+            RPCClient.SoapService.GetIntegersRequest inValue = new RPCClient.SoapService.GetIntegersRequest();
+            inValue.Body = new RPCClient.SoapService.GetIntegersRequestBody();
+            inValue.Body.count = count;
+            return ((RPCClient.SoapService.SoapServiceSoap)(this)).GetIntegersAsync(inValue);
         }
     }
 }

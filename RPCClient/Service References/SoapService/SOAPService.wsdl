@@ -2,43 +2,43 @@
 <wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
-      <s:element name="SOAPResetGenerator">
+      <s:element name="ResetGenerator">
         <s:complexType />
       </s:element>
-      <s:element name="SOAPResetGeneratorResponse">
+      <s:element name="ResetGeneratorResponse">
         <s:complexType />
       </s:element>
-      <s:element name="SOAPGetInteger">
+      <s:element name="GetInteger">
         <s:complexType />
       </s:element>
-      <s:element name="SOAPGetIntegerResponse">
+      <s:element name="GetIntegerResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="SOAPGetIntegerResult" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="GetIntegerResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="SOAPGetZero">
+      <s:element name="GetZero">
         <s:complexType />
       </s:element>
-      <s:element name="SOAPGetZeroResponse">
+      <s:element name="GetZeroResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="SOAPGetZeroResult" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="GetZeroResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="SOAPGetIntegers">
+      <s:element name="GetIntegers">
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="count" type="s:unsignedInt" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="SOAPGetIntegersResponse">
+      <s:element name="GetIntegersResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="SOAPGetIntegersResult" type="tns:ArrayOfInt" />
+            <s:element minOccurs="0" maxOccurs="1" name="GetIntegersResult" type="tns:ArrayOfInt" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -49,52 +49,52 @@
       </s:complexType>
     </s:schema>
   </wsdl:types>
-  <wsdl:message name="SOAPResetGeneratorSoapIn">
-    <wsdl:part name="parameters" element="tns:SOAPResetGenerator" />
+  <wsdl:message name="ResetGeneratorSoapIn">
+    <wsdl:part name="parameters" element="tns:ResetGenerator" />
   </wsdl:message>
-  <wsdl:message name="SOAPResetGeneratorSoapOut">
-    <wsdl:part name="parameters" element="tns:SOAPResetGeneratorResponse" />
+  <wsdl:message name="ResetGeneratorSoapOut">
+    <wsdl:part name="parameters" element="tns:ResetGeneratorResponse" />
   </wsdl:message>
-  <wsdl:message name="SOAPGetIntegerSoapIn">
-    <wsdl:part name="parameters" element="tns:SOAPGetInteger" />
+  <wsdl:message name="GetIntegerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInteger" />
   </wsdl:message>
-  <wsdl:message name="SOAPGetIntegerSoapOut">
-    <wsdl:part name="parameters" element="tns:SOAPGetIntegerResponse" />
+  <wsdl:message name="GetIntegerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIntegerResponse" />
   </wsdl:message>
-  <wsdl:message name="SOAPGetZeroSoapIn">
-    <wsdl:part name="parameters" element="tns:SOAPGetZero" />
+  <wsdl:message name="GetZeroSoapIn">
+    <wsdl:part name="parameters" element="tns:GetZero" />
   </wsdl:message>
-  <wsdl:message name="SOAPGetZeroSoapOut">
-    <wsdl:part name="parameters" element="tns:SOAPGetZeroResponse" />
+  <wsdl:message name="GetZeroSoapOut">
+    <wsdl:part name="parameters" element="tns:GetZeroResponse" />
   </wsdl:message>
-  <wsdl:message name="SOAPGetIntegersSoapIn">
-    <wsdl:part name="parameters" element="tns:SOAPGetIntegers" />
+  <wsdl:message name="GetIntegersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIntegers" />
   </wsdl:message>
-  <wsdl:message name="SOAPGetIntegersSoapOut">
-    <wsdl:part name="parameters" element="tns:SOAPGetIntegersResponse" />
+  <wsdl:message name="GetIntegersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIntegersResponse" />
   </wsdl:message>
   <wsdl:portType name="SoapServiceSoap">
-    <wsdl:operation name="SOAPResetGenerator">
-      <wsdl:input message="tns:SOAPResetGeneratorSoapIn" />
-      <wsdl:output message="tns:SOAPResetGeneratorSoapOut" />
+    <wsdl:operation name="ResetGenerator">
+      <wsdl:input message="tns:ResetGeneratorSoapIn" />
+      <wsdl:output message="tns:ResetGeneratorSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="SOAPGetInteger">
-      <wsdl:input message="tns:SOAPGetIntegerSoapIn" />
-      <wsdl:output message="tns:SOAPGetIntegerSoapOut" />
+    <wsdl:operation name="GetInteger">
+      <wsdl:input message="tns:GetIntegerSoapIn" />
+      <wsdl:output message="tns:GetIntegerSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="SOAPGetZero">
-      <wsdl:input message="tns:SOAPGetZeroSoapIn" />
-      <wsdl:output message="tns:SOAPGetZeroSoapOut" />
+    <wsdl:operation name="GetZero">
+      <wsdl:input message="tns:GetZeroSoapIn" />
+      <wsdl:output message="tns:GetZeroSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="SOAPGetIntegers">
-      <wsdl:input message="tns:SOAPGetIntegersSoapIn" />
-      <wsdl:output message="tns:SOAPGetIntegersSoapOut" />
+    <wsdl:operation name="GetIntegers">
+      <wsdl:input message="tns:GetIntegersSoapIn" />
+      <wsdl:output message="tns:GetIntegersSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="SoapServiceSoap" type="tns:SoapServiceSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="SOAPResetGenerator">
-      <soap:operation soapAction="http://tempuri.org/SOAPResetGenerator" style="document" />
+    <wsdl:operation name="ResetGenerator">
+      <soap:operation soapAction="http://tempuri.org/ResetGenerator" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -102,8 +102,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="SOAPGetInteger">
-      <soap:operation soapAction="http://tempuri.org/SOAPGetInteger" style="document" />
+    <wsdl:operation name="GetInteger">
+      <soap:operation soapAction="http://tempuri.org/GetInteger" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -111,8 +111,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="SOAPGetZero">
-      <soap:operation soapAction="http://tempuri.org/SOAPGetZero" style="document" />
+    <wsdl:operation name="GetZero">
+      <soap:operation soapAction="http://tempuri.org/GetZero" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -120,8 +120,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="SOAPGetIntegers">
-      <soap:operation soapAction="http://tempuri.org/SOAPGetIntegers" style="document" />
+    <wsdl:operation name="GetIntegers">
+      <soap:operation soapAction="http://tempuri.org/GetIntegers" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -132,8 +132,8 @@
   </wsdl:binding>
   <wsdl:binding name="SoapServiceSoap12" type="tns:SoapServiceSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="SOAPResetGenerator">
-      <soap12:operation soapAction="http://tempuri.org/SOAPResetGenerator" style="document" />
+    <wsdl:operation name="ResetGenerator">
+      <soap12:operation soapAction="http://tempuri.org/ResetGenerator" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -141,8 +141,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="SOAPGetInteger">
-      <soap12:operation soapAction="http://tempuri.org/SOAPGetInteger" style="document" />
+    <wsdl:operation name="GetInteger">
+      <soap12:operation soapAction="http://tempuri.org/GetInteger" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -150,8 +150,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="SOAPGetZero">
-      <soap12:operation soapAction="http://tempuri.org/SOAPGetZero" style="document" />
+    <wsdl:operation name="GetZero">
+      <soap12:operation soapAction="http://tempuri.org/GetZero" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -159,8 +159,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="SOAPGetIntegers">
-      <soap12:operation soapAction="http://tempuri.org/SOAPGetIntegers" style="document" />
+    <wsdl:operation name="GetIntegers">
+      <soap12:operation soapAction="http://tempuri.org/GetIntegers" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

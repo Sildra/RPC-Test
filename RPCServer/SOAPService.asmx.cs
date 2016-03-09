@@ -17,20 +17,20 @@ namespace RPCServer {
         Random generator = new Random(200);
 
         [WebMethod]
-        public void SOAPResetGenerator() {
+        public void ResetGenerator() {
             generator = new Random(200);
         }
         [WebMethod]
-        public Int32 SOAPGetInteger() {
+        public int GetInteger() {
             return generator.Next();
         }
         [WebMethod]
-        public Int32 SOAPGetZero() {
+        public int GetZero() {
             return 0;
         }
         [WebMethod]
-        public Int32[] SOAPGetIntegers(uint count) {
-            Int32[] result = new Int32[count];
+        public int[] GetIntegers(uint count) {
+            int[] result = new int[count];
             for (uint i = 0; i < count; ++i)
                 result[i] = generator.Next();
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPCClient {
     class DataCollector {
-        const int count = 1000;
+        const int count = 50000;
         List<TestData> _tests = new List<TestData>();
 
         static internal int GetCount() {
