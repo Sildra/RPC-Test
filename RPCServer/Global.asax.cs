@@ -25,7 +25,7 @@ namespace RPCServer {
                     Ports = { new ServerPort("127.0.0.1", 52025, ServerCredentials.Insecure) }
                 };
             } catch (Exception ex) {
-                // do a breakpoint here to help you locate the path where it will load the DLL (lazy workaround)
+                // Throw the exception with the complete message (FileNotFoundException is not enough)
                 // The folder is reset on build so comment the define then build the server then copy the DLL
                 string val = ex.ToString();
                 throw new Exception(val);
