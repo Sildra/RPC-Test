@@ -1,4 +1,4 @@
-﻿#define HELP_ME_LOCATE_THE_FOLDER
+#define HELP_ME_LOCATE_THE_FOLDER
 
 using Grpc.Core;
 using Grpcservice;
@@ -28,6 +28,7 @@ namespace RPCServer {
                 // do a breakpoint here to help you locate the path where it will load the DLL (lazy workaround)
                 // The folder is reset on build so comment the define then build the server then copy the DLL
                 string val = ex.ToString();
+                throw new Exception(val);
             }
 #endif
 
